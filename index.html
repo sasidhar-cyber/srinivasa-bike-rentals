@@ -22,4 +22,38 @@ function openSidebar(){document.body.classList.add('sidebar-open');side.setAttri
 function closeSidebar(){document.body.classList.remove('sidebar-open');side.setAttribute('aria-hidden','true');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰';}
 toggle.addEventListener('click',()=>document.body.classList.contains('sidebar-open')?closeSidebar():openSidebar());closeBtn.addEventListener('click',closeSidebar);shade.addEventListener('click',closeSidebar);document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSidebar()});
 document.querySelectorAll('.sidebar-links a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.sidebar-links a').forEach(x=>x.classList.remove('active'));a.classList.add('active');closeSidebar()}));
-</script></body></html>
+</script>
+<script>
+(function(){
+ const heading=document.querySelector('.hero h1');
+ if(heading){
+  let index=0;
+  function wrapLetters(node){
+   if(node.nodeType===Node.TEXT_NODE){
+    const fragment=document.createDocumentFragment();
+    for(const ch of node.textContent){
+     if(ch===' '){fragment.appendChild(document.createTextNode(' '));continue;}
+     const span=document.createElement('span');
+     span.className='hero-letter';
+     span.style.animationDelay=(index*32)+'ms';
+     span.textContent=ch;
+     fragment.appendChild(span);index++;
+    }
+    node.replaceWith(fragment);
+   } else if(node.nodeType===Node.ELEMENT_NODE){
+    [...node.childNodes].forEach(wrapLetters);
+   }
+  }
+  [...heading.childNodes].forEach(wrapLetters);
+ }
+ const revealItems=document.querySelectorAll('.hero-copy .pill,.hero-copy .lead,.hero-copy .hero-actions,.hero-image,.perk,.sectionhead,.bikecard,.contactcard,.faq details,.bandinner');
+ revealItems.forEach((el,i)=>{el.classList.add('entrance-reveal');el.style.setProperty('--reveal-delay',Math.min(i%8,7)*85+'ms');});
+ if('IntersectionObserver' in window){
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+   if(entry.isIntersecting){entry.target.classList.add('entered');observer.unobserve(entry.target);}
+  }),{threshold:.12});
+  revealItems.forEach(el=>observer.observe(el));
+ }else{revealItems.forEach(el=>el.classList.add('entered'));}
+})();
+</script>
+</body></html>
