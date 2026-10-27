@@ -234,3 +234,7 @@ body{background:#f5f5f2;color:#111315}
 .hero-photo .traffic-glow{bottom:12%;height:2px;opacity:.85}
 @media(max-width:620px){.hero-photo .moving-bike{width:42px!important}.hero-photo .bike-a{top:43%}.hero-photo .bike-b{top:43%}.hero-photo .bike-c{top:43%}}
 @media(prefers-reduced-motion:reduce){.hero-photo .moving-bike{display:none!important}}
+
+/* Static premium road hero — no animated bikes */
+.hero-photo .photo-shade{z-index:2}
+.hero-photo .photo-kicker,.hero-photo .photo-title,.hero-photo .photo-footer,.hero-photo .photo-stamp{z-index:3}
