@@ -1,7 +1,7 @@
 const WHATSAPP_NUMBER="919966462687"; // Add business WhatsApp number with country code, digits only, e.g. 91XXXXXXXXXX
 function waLink(message){return "https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message)}
 document.querySelectorAll(".menu-toggle").forEach(btn=>btn.addEventListener("click",()=>{const nav=document.querySelector(".navlinks");const open=nav.classList.toggle("open");btn.setAttribute("aria-expanded",String(open));btn.textContent=open?"×":"☰"}));
-document.querySelectorAll(".wa-link").forEach(a=>a.addEventListener("click",e=>{if(!WHATSAPP_NUMBER){e.preventDefault();alert("WhatsApp contact will be activated once the business number is added.");return}e.preventDefault();window.open(waLink("Hi Srinivasa Bike Rentals! I would like to enquire about rental prices and details."),"_blank","noopener")}));
+
 document.querySelectorAll(".bike-enquiry").forEach(a=>{const name=a.dataset.bike||"your bike";a.href=waLink("Hi Srinivasa Bike Rentals! Please share rental price and details for "+name+".")});
 document.querySelectorAll("#year").forEach(el=>el.textContent=new Date().getFullYear());
 if(!matchMedia("(prefers-reduced-motion: reduce)").matches){const items=document.querySelectorAll(".hero-copy,.hero-image,.perk,.sectionhead,.bikecard,.split,.contactcard,.faq details,.bandinner,.notice");items.forEach(el=>el.classList.add("reveal"));const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}),{threshold:.12,rootMargin:"0px 0px -25px 0px"});items.forEach(el=>observer.observe(el))}else{document.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"))}
