@@ -187,3 +187,32 @@ body{background:#f5f5f2;color:#111315}
 @keyframes photoBikeRide{0%{left:-180px;opacity:0;transform:translateY(8px) scale(.86)}8%{opacity:.96}45%{opacity:.85}90%{opacity:.9}100%{left:110%;opacity:0;transform:translateY(-3px) scale(.86)}}
 @media(max-width:620px){.hero-photo .moving-bike{width:90px}.hero-photo .bike-a{top:16%}.hero-photo .bike-b{top:44%}.hero-photo .bike-c{top:69%}}
 @media(prefers-reduced-motion:reduce){.hero-photo .moving-bike{animation:none;display:none}}
+
+/* Road-trip hero: riders approach from the far end of the road */
+.hero-image.hero-photo{background:#101214!important}
+.hero-photo>img{object-position:center 58%!important;filter:saturate(.92) contrast(1.12) brightness(.72)!important}
+.hero-photo .ride-traffic{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;opacity:1;perspective:600px}
+.hero-photo .traffic-glow{left:12%;right:12%;bottom:12%;height:2px;background:linear-gradient(90deg,transparent,#ffc80080,#fff1a0,#ffc80080,transparent);box-shadow:0 0 20px #ffc80080}
+.hero-photo .moving-bike{left:50%;top:39%;width:clamp(72px,13vw,142px);opacity:0;transform-origin:center center;filter:drop-shadow(0 0 8px #ffc800b0) drop-shadow(0 5px 8px #000c)}
+.hero-photo .moving-bike svg{overflow:visible}
+.hero-photo .moving-bike circle{fill:#090b0d;stroke:#ffc800;stroke-width:3}
+.hero-photo .moving-bike .frame{stroke:#ffd43b;stroke-width:4}
+.hero-photo .moving-bike .tank{fill:#ffc800;stroke:#fff0a3}
+.hero-photo .moving-bike .rider{stroke:#fff4c1;stroke-width:6}
+.hero-photo .moving-bike .light{fill:#fffbd2;filter:drop-shadow(0 0 7px #ffc800) drop-shadow(0 0 15px #ffc800)}
+.hero-photo .bike-a{animation:rideFromHorizon 4.8s 0s ease-in infinite}
+.hero-photo .bike-b{animation:rideFromHorizon 5.6s 1.7s ease-in infinite}
+.hero-photo .bike-c{animation:rideFromHorizon 5.1s 3.2s ease-in infinite}
+.hero-photo .photo-shade{z-index:3;background:linear-gradient(100deg,#07090b9c 0%,#07090b30 46%,#07090b08 100%),linear-gradient(0deg,#07090bf2 0%,#07090b20 55%,#07090b22 100%);pointer-events:none}
+.hero-photo .photo-kicker,.hero-photo .photo-title,.hero-photo .photo-footer,.hero-photo .photo-stamp{z-index:4}
+@keyframes rideFromHorizon{
+  0%{left:50%;top:42%;opacity:0;transform:translate(-50%,-50%) scale(.04) rotate(-2deg)}
+  12%{opacity:.9}
+  48%{opacity:1}
+  75%{opacity:.92}
+  100%{left:50%;top:112%;opacity:0;transform:translate(-50%,-50%) scale(1.5) rotate(-2deg)}
+}
+.hero-photo .bike-b{animation-name:rideFromHorizon;animation-delay:1.7s;filter:hue-rotate(12deg) drop-shadow(0 0 8px #ffc80090)}
+.hero-photo .bike-c{animation-name:rideFromHorizon;animation-delay:3.2s;filter:grayscale(.25) drop-shadow(0 0 8px #ffc80090)}
+@media(max-width:620px){.hero-photo .moving-bike{width:88px}.hero-photo .bike-a{animation-duration:4.8s}.hero-photo .bike-b{animation-duration:5.6s}.hero-photo .bike-c{animation-duration:5.1s}}
+@media(prefers-reduced-motion:reduce){.hero-photo .moving-bike{animation:none;display:none}}
