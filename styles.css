@@ -167,3 +167,23 @@ body{background:#f5f5f2;color:#111315}
 @keyframes cruiseAcross{0%{left:-180px;opacity:0}6%{opacity:.85}40%{opacity:.72}85%{opacity:.75}100%{left:110%;opacity:0}}
 @media(max-width:620px){.ride-traffic{inset:0 -14vw 0;opacity:.85}.moving-bike{width:88px}.bike-a{top:3%}.bike-b{top:44%}.bike-c{top:82%}}
 @media(prefers-reduced-motion:reduce){.moving-bike{animation:none;display:none}}
+
+/* Animated riders travel INSIDE the THE CITY IS YOURS photo card */
+.hero-image.hero-photo{isolation:isolate}
+.hero-photo .ride-traffic{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;opacity:1}
+.hero-photo .traffic-glow{left:0;right:0;bottom:18%;height:2px;background:linear-gradient(90deg,transparent,#ffc800b0 20%,#fff3a0 48%,#ffc800a0 72%,transparent);box-shadow:0 0 18px #ffc80090,0 0 40px #ffc80030}
+.hero-photo .moving-bike{width:clamp(90px,13vw,150px);left:-180px;opacity:0;filter:drop-shadow(0 0 7px #ffc800a0) drop-shadow(0 4px 9px #0009)}
+.hero-photo .moving-bike svg{overflow:visible}
+.hero-photo .moving-bike circle{fill:#090b0d;stroke:#ffc800;stroke-width:2.7}
+.hero-photo .moving-bike .frame{stroke:#ffd53a;stroke-width:4.3}
+.hero-photo .moving-bike .tank{fill:#ffc800;stroke:#fff0a3}
+.hero-photo .moving-bike .rider{stroke:#fff4c1;stroke-width:6}
+.hero-photo .moving-bike .light{fill:#fff9c8;filter:drop-shadow(0 0 7px #ffc800) drop-shadow(0 0 14px #ffc800)}
+.hero-photo .bike-a{top:18%;animation:photoBikeRide 10s linear infinite}
+.hero-photo .bike-b{top:47%;animation:photoBikeRide 13s 3.4s linear infinite;transform:scale(.72)}
+.hero-photo .bike-c{top:69%;animation:photoBikeRide 11s 6.2s linear infinite;transform:scale(.52)}
+.hero-photo .photo-shade{z-index:3;background:linear-gradient(100deg,#07090b99 0%,#07090b30 36%,#07090b00 82%),linear-gradient(0deg,#07090bf0 0%,#07090b0a 52%,#07090b20 100%);pointer-events:none}
+.hero-photo .photo-kicker,.hero-photo .photo-title,.hero-photo .photo-footer,.hero-photo .photo-stamp{z-index:4}
+@keyframes photoBikeRide{0%{left:-180px;opacity:0;transform:translateY(8px) scale(.86)}8%{opacity:.96}45%{opacity:.85}90%{opacity:.9}100%{left:110%;opacity:0;transform:translateY(-3px) scale(.86)}}
+@media(max-width:620px){.hero-photo .moving-bike{width:90px}.hero-photo .bike-a{top:16%}.hero-photo .bike-b{top:44%}.hero-photo .bike-c{top:69%}}
+@media(prefers-reduced-motion:reduce){.hero-photo .moving-bike{animation:none;display:none}}
