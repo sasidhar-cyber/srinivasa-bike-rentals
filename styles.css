@@ -264,3 +264,62 @@ body{background:#f5f5f2;color:#111315}
 .brand>span:last-child b{display:block!important;font-size:16px!important;line-height:1.15!important;letter-spacing:.15px!important;white-space:nowrap!important}
 .brand>span:last-child small{display:block!important;font-size:11px!important;letter-spacing:3px!important;margin-top:4px!important}
 @media(max-width:620px){.brand{gap:8px!important}.brandmark{width:56px!important;height:56px!important;min-width:56px!important}.brand>span:last-child b{font-size:11px!important;letter-spacing:0!important}.brand>span:last-child small{font-size:9px!important;letter-spacing:2px!important}}
+
+/* Responsive Tirupati reference-inspired landing page */
+:root{--gold:#ffbf00;--navy:#102541;--cream:#fffaf0}
+body{background:#fff;color:#101b2d;font-family:"DM Sans",sans-serif}
+.wrap{width:min(1460px,calc(100% - 44px))}
+.topline{background:var(--gold);color:#101b2d;padding:8px max(22px,calc((100% - 1460px)/2));font-size:10px}
+.header{background:#fffffffa;border-bottom:1px solid #ece8df;box-shadow:0 4px 20px #18243a0c}
+.navrow{height:112px;gap:22px}
+.brand{gap:16px;align-items:center}
+.brand-logo{width:116px;height:116px;object-fit:contain;flex:none;border-radius:50%;filter:drop-shadow(0 3px 5px #10254122)}
+.brand-name{display:flex;flex-direction:column;line-height:1}
+.brand-name b{font:900 clamp(20px,2.2vw,34px)/1 Manrope,sans-serif;letter-spacing:-1.3px;color:var(--navy)}
+.brand-name strong{font:900 clamp(13px,1.3vw,20px)/1.15 Manrope,sans-serif;letter-spacing:1px;color:#101b2d;background:var(--gold);padding:5px 10px;margin-top:5px;transform:skew(-7deg);white-space:nowrap}
+.brand-name small{font:800 12px/1.2 Manrope,sans-serif;letter-spacing:6px;text-align:center;margin-top:8px;color:var(--navy)}
+.navlinks{gap:clamp(12px,2vw,30px);font-size:14px;color:#111827}
+.navlinks a{display:flex;align-items:center;gap:7px;padding:12px 14px;border-radius:10px}
+.navlinks a:after{display:none}
+.navlinks a.active,.navlinks a:hover{background:var(--gold);color:#101b2d}
+.btn{border-radius:30px;padding:15px 23px;background:var(--gold);font-size:14px;color:#111827}
+.header-wa{white-space:nowrap;box-shadow:0 5px 14px #00000015}
+.menu-toggle{display:none}
+.showcase{position:relative;min-height:670px;display:grid;grid-template-columns:minmax(390px,.82fr) minmax(480px,1.18fr);align-items:center;overflow:hidden;padding:55px max(4.5vw,28px) 130px;isolation:isolate;background:#f4ead7}
+.showcase-bg{position:absolute;inset:0;z-index:-2;background:url("https://assets.avis.co.in/images/Taxi_Images/banglore/tirupati/image2.webp") center 42%/cover no-repeat}
+.showcase:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#fffaf0f2 0%,#fffaf0e8 31%,#fffaf080 54%,#fffaf010 100%),linear-gradient(0deg,#fffaf0 0%,transparent 25%)}
+.showcase-copy{max-width:610px;z-index:2}
+.showcase-copy .eyebrow{font-size:15px;letter-spacing:4px;color:#111827}
+.showcase-copy h1{font:900 clamp(50px,6.1vw,94px)/.92 Manrope,sans-serif;letter-spacing:-4px;margin:24px 0 10px;color:var(--navy)}
+.showcase-copy h1 span{display:inline-block;background:var(--gold);padding:8px 20px 10px;font-size:.53em;letter-spacing:-1px;transform:skew(-5deg);white-space:nowrap}
+.place-mark{font:900 22px Manrope;letter-spacing:7px;margin:12px 0;color:var(--navy)}
+.showcase-copy>p{font-size:20px;color:#555;margin:14px 0 22px}
+.quick-perks{display:grid;grid-template-columns:repeat(4,minmax(90px,1fr));gap:10px;margin:22px 0 24px}
+.quick-perks>div{background:#ffffffdf;border-radius:16px;padding:13px 8px;text-align:center;box-shadow:0 6px 20px #10254112;display:flex;flex-direction:column;align-items:center}
+.quick-perks b{font-size:28px;color:#f0ae00;line-height:1.1}
+.quick-perks strong{font-size:15px;margin-top:6px}
+.quick-perks small{font-size:12px}
+.hero-wa{background:var(--gold);font-size:18px;padding:17px 28px;box-shadow:0 8px 24px #c18c0028}
+.hero-wa span{font-size:26px;line-height:12px}
+.showcase-bikes{align-self:end;display:flex;align-items:end;justify-content:center;gap:0;min-width:0;padding:35px 0 0}
+.bike-cutout{width:33%;height:300px;position:relative;display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 16px 13px #0005)}
+.bike-cutout img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;border-radius:16px}
+.bike-cutout span{position:absolute;bottom:2px;left:50%;transform:translateX(-50%);background:#102541;color:white;padding:5px 12px;border-radius:20px;font-size:10px;font-weight:900;letter-spacing:1px;white-space:nowrap}
+.detail-strip{position:absolute;bottom:22px;left:7%;right:7%;min-height:100px;background:#fffffff2;border-radius:28px;box-shadow:0 16px 38px #18243a18;display:grid;grid-template-columns:repeat(4,1fr);align-items:center;padding:18px 24px}
+.detail-strip>div{display:flex;align-items:center;justify-content:center;gap:15px;border-right:1px solid #d6d6d6;min-height:55px}
+.detail-strip>div:last-child{border:0}
+.detail-strip>div>b{font-size:34px;color:#f3b500}
+.detail-strip strong,.detail-strip small{display:block}
+.detail-strip strong{font-size:16px}.detail-strip small{font-size:15px;margin-top:3px}
+.fleet-section{padding:75px 0}
+.section-heading{text-align:center;margin-bottom:28px}.section-heading h2,.rules-inner h2,.contact-cta h2{font:900 clamp(32px,4vw,48px) Manrope;margin:10px 0;color:var(--navy)}.section-heading p,.contact-cta p{color:#62666e}
+.fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fleet-grid article{border:1px solid #eee7d8;border-radius:18px;overflow:hidden;padding-bottom:20px;box-shadow:0 10px 30px #1025410c}
+.fleet-grid img{width:100%;height:220px;object-fit:cover}.fleet-grid h3,.fleet-grid small,.fleet-grid article>b{display:block;margin-left:20px;margin-right:20px}.fleet-grid h3{margin-top:17px;margin-bottom:5px;font:800 21px Manrope}.fleet-grid small{color:#777;font-size:10px;letter-spacing:1px}.fleet-grid article>b{margin-top:15px;color:#8b6700;font-size:16px}
+.rules-section{background:#fff6d8;padding:55px 0}.rules-inner{display:grid;grid-template-columns:.7fr 1.3fr;gap:45px;align-items:center}.rules-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.rules-grid p{background:#fff;border-radius:14px;padding:18px;margin:0}.rules-grid b,.rules-grid span{display:block}.rules-grid b{font:900 22px Manrope;color:var(--navy)}.rules-grid span{font-size:12px;color:#666;margin-top:4px}
+.contact-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:60px;padding-bottom:60px}
+.footer{background:var(--navy);border-top:5px solid var(--gold);padding:25px 0}.footrow{display:flex;align-items:center;justify-content:space-between;gap:24px;color:white}.footer .brand-name b,.footer .brand-name small{color:white}.footer .brand-name strong{color:#101b2d}.footer .brand-logo{width:70px;height:70px}
+@media(max-width:1050px){.navrow{gap:12px}.brand-logo{width:88px;height:88px}.brand-name b{font-size:21px}.brand-name strong{font-size:14px}.brand-name small{font-size:10px}.navlinks{gap:4px}.navlinks a{padding:10px 8px}.header-wa{padding:12px 15px;font-size:12px}.showcase{grid-template-columns:.9fr 1.1fr;padding-left:30px;padding-right:30px}.showcase-copy h1{font-size:64px}.bike-cutout{height:250px}}
+@media(max-width:760px){.topline{display:none}.navrow{height:auto;min-height:78px;padding:8px 0;flex-wrap:wrap}.brand{gap:9px}.brand-logo{width:64px;height:64px}.brand-name b{font-size:16px;letter-spacing:-.5px}.brand-name strong{font-size:11px;padding:4px 7px}.brand-name small{font-size:9px;letter-spacing:4px;margin-top:5px}.header-wa{display:none}.menu-toggle{display:block;width:42px;height:42px;margin-left:auto;background:var(--gold);border:0;border-radius:10px;font-size:22px}.navlinks{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;padding:12px 18px 18px;box-shadow:0 14px 22px #0002;flex-direction:column;align-items:stretch;gap:4px}.navlinks.open{display:flex}.navlinks a{padding:12px;border-radius:9px}.showcase{display:flex;flex-direction:column;align-items:stretch;min-height:unset;padding:45px 22px 150px;gap:14px}.showcase:before{background:linear-gradient(90deg,#fffaf0ef,#fffaf0b8),linear-gradient(0deg,#fffaf0 0%,transparent 30%)}.showcase-copy{width:100%;max-width:none}.showcase-copy .eyebrow{font-size:10px;letter-spacing:2px}.showcase-copy h1{font-size:clamp(43px,12vw,65px);letter-spacing:-2.5px;margin:16px 0 8px}.showcase-copy h1 span{font-size:.55em;padding:7px 12px}.place-mark{font-size:15px;letter-spacing:4px}.showcase-copy>p{font-size:15px;margin:10px 0 16px}.quick-perks{gap:7px;margin:15px 0}.quick-perks>div{padding:10px 4px;border-radius:12px}.quick-perks b{font-size:22px}.quick-perks strong{font-size:12px}.quick-perks small{font-size:10px}.hero-wa{font-size:14px;padding:14px 20px}.showcase-bikes{padding:6px 0 0;min-height:150px}.bike-cutout{height:160px;width:33%}.bike-cutout span{font-size:8px;padding:4px 7px}.detail-strip{left:12px;right:12px;bottom:12px;min-height:0;border-radius:16px;padding:10px 6px;grid-template-columns:repeat(2,1fr);gap:4px}.detail-strip>div{justify-content:flex-start;padding:7px 8px;gap:8px;min-height:48px;border-right:0}.detail-strip>div:nth-child(odd){border-right:1px solid #ddd}.detail-strip>div>b{font-size:22px}.detail-strip strong{font-size:11px}.detail-strip small{font-size:10px}.fleet-section{padding:50px 0}.fleet-grid{grid-template-columns:1fr;gap:15px}.fleet-grid img{height:200px}.rules-inner{grid-template-columns:1fr;gap:18px}.rules-section{padding:42px 0}.rules-grid{gap:9px}.rules-grid p{padding:14px}.rules-grid b{font-size:18px}.rules-grid span{font-size:10px}.contact-cta{display:block;padding-top:45px;padding-bottom:45px}.contact-cta .btn{margin-top:12px}.footrow{align-items:flex-start;flex-direction:column}.footer .brand-logo{width:56px;height:56px}}
+@media(max-width:370px){.brand-logo{width:54px;height:54px}.brand-name b{font-size:14px}.quick-perks{grid-template-columns:repeat(2,1fr)}.showcase{padding-bottom:170px}.detail-strip>div{padding:6px 5px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
