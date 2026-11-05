@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER="919966462687"; // Add business WhatsApp number with country code, digits only, e.g. 91XXXXXXXXXX
+const WHATSAPP_NUMBER="918639073673"; // Add business WhatsApp number with country code, digits only, e.g. 91XXXXXXXXXX
 function waLink(message){return "https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message)}
 document.querySelectorAll(".menu-toggle").forEach(btn=>btn.addEventListener("click",()=>{const nav=document.querySelector(".navlinks");const open=nav.classList.toggle("open");btn.setAttribute("aria-expanded",String(open));btn.textContent=open?"×":"☰"}));
 
